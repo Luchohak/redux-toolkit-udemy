@@ -6,8 +6,8 @@ const Counter = () => {
   const dispatch = useDispatch();
   //when using a useSelector hook from react-redux we're automatically setting up a subscription to the store
   //when the component gets unmounted, React will cancel this subscription for you
-  const counter = useSelector((state) => state.counter);
-  const showCounter = useSelector((state) => state.showCounter);
+  const counter = useSelector((state) => state.counter.counter);
+  const showCounter = useSelector((state) => state.counter.showCounter);
 
   const incrementHandler = () => {
     dispatch(counterActions.increment());
